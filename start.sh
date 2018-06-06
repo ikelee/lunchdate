@@ -3,8 +3,8 @@ TIMEOUT=120
 
 # Start Gunicorn processes
 echo Starting Gunicorn.
-echo process.env.PORT
+echo $PORT
 exec gunicorn lunchdate.wsgi:application \
-    --bind process.env.PORT \
+    --bind 0.0.0.0:8000 \
     --workers 3 \
     --timeout $TIMEOUT
