@@ -25,7 +25,7 @@ SECRET_KEY = 'lf%j&3z^cgy$fz%l^6%q!_2*xzbj6n2*j)j7aj!qpkc2cg7s+w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lunchdate-1.herokuapp.com']
+ALLOWED_HOSTS = ['lunchdate-1.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'lunchdate.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['lunchDateApp/view'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
