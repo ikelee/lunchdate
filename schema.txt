@@ -1,0 +1,5 @@
+company {
+    name = String!
+    id = String! 
+    created_date = DateTime 
+}

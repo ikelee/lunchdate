@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['lunchdate-1.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'lunchDateApp.apps.LunchdateappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,6 +51,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'lunchdate.urls'
+
+STATIC_URL = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 TEMPLATES = [
     {
@@ -75,8 +79,12 @@ WSGI_APPLICATION = 'lunchdate.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'lunchdate',
+        'USER': 'ikelee',
+        'PASSWORD': os.environ.get('PASSWORD'), 
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
