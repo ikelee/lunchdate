@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'lunchdate.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lunchdate',
         'USER': 'ikelee',
         'PASSWORD': os.environ.get('PASSWORD'), 

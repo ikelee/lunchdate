@@ -12,7 +12,3 @@ urlpatterns = [
     path('session_detail', views.session_detail, name='session_detail'),
     path('member_status', views.member_status, name='member_status')
 ]
-
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]
