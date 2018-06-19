@@ -1,1 +1,9 @@
 <div>This is the signup page, please sign up!</div>
+
+<form action="/set_up_new_user_login" method="POST">
+    {% csrf_token %}
+    username: <input name="username"/>
+    password: <input name="password" type="password"/>
+    email: <input name="email"/>
+    <input type="submit"/>
+</form>

@@ -1,0 +1,13 @@
+<h1>This is the signup details page</h1>
+
+<form action="/set_up_new_user_detail" method="POST">
+    {% csrf_token %}
+    user_type: <select name="account_type">
+        <option selected="selected" disabled>Type of user:</option>
+        <option value="{{ host }}">Host</option>
+        <option value="{{ participant }}">Participant</option>
+    </select>
+    number of seats: <input name="seat_count"/>
+    host_name: <input name="host_name"/>
+    <input type="submit"/>
+</form>
