@@ -40,3 +40,9 @@ def session_detail(request):
 
 def member_status(request):
     return render(request, 'member_status.html')
+
+def set_up_new_user_host(request):
+    return render(request, 'new_host.html')
+
+def set_up_new_user_participant(request):
+    return render(request, 'new_participant.html')

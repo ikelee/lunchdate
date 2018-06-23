@@ -1,0 +1,7 @@
+<h1>This is the new host page</h1>
+
+<form action="/new_host_detail" method="POST">
+    {% csrf_token %}
+    host_name: <input name="host_name"/>
+    <input type="submit"/>
+</form>

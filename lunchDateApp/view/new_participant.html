@@ -1,0 +1,9 @@
+<h1>This is the new participant page</h1>
+
+<form action="/new_participant_detail" method="POST">
+    {% csrf_token %}
+    participant_name: <input name="participant_name"/>
+    participant_age: <input name="participant_age"/>
+    session_host: <input name="session_host"/>
+    <input type="submit"/>
+</form>
