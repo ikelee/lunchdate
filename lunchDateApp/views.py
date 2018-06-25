@@ -19,16 +19,16 @@ def login(request):
 def signup(request):
     return render(request, 'signup.html')
 
-def landing_admin(request):
-    return render(request, 'landing_admin.html')
+def landing_host(request):
+    return render(request, 'landing_host.html')
 
-def landing_member(request):
+def landing_participant(request):
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password)
     if user is not None:
         log_in(request, user)
-        return render(request, 'landing_member.html')
+        return render(request, 'landing_participant.html')
     else:
         return render(request, 'index.html')
 
